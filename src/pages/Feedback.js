@@ -44,12 +44,10 @@ class Feedback extends React.Component {
           <span data-testid="feedback-total-score">
             { score }
           </span>
+          {assertions >= n
+            ? <p data-testid="feedback-text" className="well-done feedback-text">Well Done!</p>
+            : <p data-testid="feedback-text" className="better feedback-text">Could be better...</p>}
 
-          <p className="feedback-text">
-            {assertions >= n
-              ? <p data-testid="feedback-text" className="well-done">Well Done!</p>
-              : <p data-testid="feedback-text" className="better">Could be better...</p>}
-          </p>
         </section>
         <section className="buttons-feedback-cotainer">
 
